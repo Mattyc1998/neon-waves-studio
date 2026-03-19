@@ -15,7 +15,7 @@ const BookCTA = () => {
           Give us a call or book online — we'd love to welcome you to The Hair Studio.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          
+          <a
             href="tel:01825763042"
             className="bg-black text-[#39FF14] px-7 py-3 rounded-md font-semibold hover:opacity-90 transition font-body"
           >
