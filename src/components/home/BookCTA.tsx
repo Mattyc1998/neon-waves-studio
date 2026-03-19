@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const BookCTA = () => {
   return (
-    <section className="relative py-16 md:py-24 bg-primary overflow-hidden">
+    <section className="relative py-[80px] bg-primary overflow-hidden">
       {/* Background Shapes */}
       <div className="absolute inset-0 pointer-events-none opacity-20 flex justify-between items-center z-0">
         <div className="w-64 h-64 border-8 border-[#003300] rounded-full translate-x-[-20%] translate-y-[20%]"></div>

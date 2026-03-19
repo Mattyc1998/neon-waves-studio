@@ -11,7 +11,7 @@ const services = [
 
 const ServicesGrid = () => {
   return (
-    <section id="services" className="py-16 md:py-24">
+    <section id="services" className="py-[80px]">
       <div className="container mx-auto px-4">
         <span className="text-primary uppercase text-sm font-semibold tracking-widest font-body">What we do</span>
         <h2 className="text-3xl sm:text-4xl text-accent mt-2 mb-10">Our Services</h2>
@@ -37,7 +37,7 @@ const ServicesGrid = () => {
 
         <div className="mt-8 text-center">
           <Link to="/services" className="text-primary hover:underline font-semibold font-body">
-            View all pricing →
+            View all services →
           </Link>
         </div>
       </div>

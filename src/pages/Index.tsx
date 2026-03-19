@@ -34,7 +34,6 @@ const Index = () => {
         <FadeInSection>
           <HeroSection />
         </FadeInSection>
-        <Divider />
         <FadeInSection>
           <AboutTeaser />
         </FadeInSection>

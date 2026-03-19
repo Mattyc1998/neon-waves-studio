@@ -20,7 +20,7 @@ const offers = [
 
 const CurrentOffers = () => {
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
+    <section className="py-[80px] bg-muted/30">
       <div className="container mx-auto px-4">
         <span className="text-primary uppercase text-sm font-semibold tracking-widest font-body">Don't miss out</span>
         <h2 className="text-3xl sm:text-4xl text-accent mt-2 mb-10">Current Offers</h2>
@@ -35,7 +35,8 @@ const CurrentOffers = () => {
               <p className="text-muted-foreground text-sm font-body mb-5">{o.desc}</p>
               <Link
                 to="/contact"
-                className="inline-block bg-primary text-black px-7 py-3 rounded-md font-semibold hover:brightness-110 transition"
+                className="inline-block px-7 py-3 rounded-md font-semibold hover:brightness-110 transition"
+                style={{ backgroundColor: '#39FF14', color: '#000000' }}
               >
                 Book This Deal
               </Link>
@@ -46,7 +47,7 @@ const CurrentOffers = () => {
         <div className="mt-8 text-center">
           <Link
             to="/pricing"
-            className="inline-block border-2 border-white text-white px-7 py-3 rounded-md font-semibold hover:bg-white hover:text-black transition"
+            className="inline-block border-[1px] border-solid border-white bg-transparent text-white px-7 py-3 rounded-md font-semibold hover:bg-white hover:text-black transition"
           >
             View all offers →
           </Link>

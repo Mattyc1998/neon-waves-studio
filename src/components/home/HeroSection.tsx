@@ -5,7 +5,7 @@ import AnimatedShapes from "./AnimatedShapes";
 
 const HeroSection = () => {
   return (
-    <section className="relative py-16 md:py-24 flex items-center overflow-hidden">
+    <section className="relative min-h-[calc(100vh-64px)] py-[40px] flex items-center overflow-hidden">
       <AnimatedShapes />
       <GeometricDecoration />
       <div className="container mx-auto px-4">
@@ -20,7 +20,7 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-4 mb-6">
               <Link
                 to="/contact"
-                className="bg-primary text-black px-7 py-3 rounded-md font-semibold hover:brightness-110 transition"
+                className="bg-[#39FF14] text-black px-7 py-3 rounded-md font-semibold hover:brightness-110 transition"
               >
                 Book an Appointment
               </Link>
