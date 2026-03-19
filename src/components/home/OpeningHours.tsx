@@ -1,4 +1,5 @@
 const hours = [
+  { day: "Monday", time: "Closed" },
   { day: "Tuesday", time: "9am – 5pm" },
   { day: "Wednesday", time: "9am – 5pm" },
   { day: "Thursday", time: "9am – 7pm", badge: "Senior & Student Day — 10% off" },
@@ -9,7 +10,7 @@ const hours = [
 
 const OpeningHours = () => {
   return (
-    <section className="py-20">
+    <section className="py-20 bg-[#1a1a1a]">
       <div className="container mx-auto px-4 max-w-2xl text-center">
         <span className="text-primary uppercase text-sm font-semibold tracking-widest font-body">Come and see us</span>
         <h2 className="text-3xl sm:text-4xl text-accent mt-2 mb-10">When you can find us</h2>
@@ -23,7 +24,7 @@ const OpeningHours = () => {
                   {h.time}
                 </span>
                 {h.badge && (
-                  <span className="bg-secondary/20 text-secondary text-xs px-2 py-1 rounded-full font-body font-medium">
+                  <span className="bg-[#FF1493]/20 text-[#FF1493] text-xs px-2 py-1 rounded-full font-body font-bold tracking-wide">
                     {h.badge}
                   </span>
                 )}

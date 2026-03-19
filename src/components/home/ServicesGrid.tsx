@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
 const services = [
-  { emoji: "✂️", title: "Cuts & Styling", desc: "Precision cuts shaped to your style and face", price: "From £25", color: "border-t-primary" },
-  { emoji: "🎨", title: "Colour & Highlights", desc: "Vibrant, long-lasting colour and balayage", price: "From £60", color: "border-t-secondary" },
-  { emoji: "💇", title: "Hair Extensions & Fairy Tinsel", desc: "Add length, volume and a little magic", price: "From £120", color: "border-t-accent" },
-  { emoji: "🎉", title: "Girls Pamper Package", desc: "Perfect for birthdays and special occasions", price: "From £45", color: "border-t-primary" },
-  { emoji: "💎", title: "Body Piercing", desc: "Professional, hygienic piercing service", price: "From £20", color: "border-t-secondary" },
-  { emoji: "🌿", title: "Glowwa Supplements", desc: "Nourish your hair from the inside out", price: "Shop in salon", color: "border-t-accent" },
+  { emoji: "✂️", title: "Cuts & Styling", desc: "Precision cuts shaped to your style and face", price: "From £25", color: "border-t-primary", glowClass: "hover:shadow-[0_-5px_20px_hsl(var(--primary)/0.4)]", borderGlow: "hover:border-primary" },
+  { emoji: "🎨", title: "Colour & Highlights", desc: "Vibrant, long-lasting colour and balayage", price: "From £60", color: "border-t-secondary", glowClass: "hover:shadow-[0_-5px_20px_hsl(var(--secondary)/0.4)]", borderGlow: "hover:border-secondary" },
+  { emoji: "💇", title: "Hair Extensions & Fairy Tinsel", desc: "Add length, volume and a little magic", price: "From £120", color: "border-t-accent", glowClass: "hover:shadow-[0_-5px_20px_hsl(var(--accent)/0.4)]", borderGlow: "hover:border-accent" },
+  { emoji: "🎉", title: "Girls Pamper Package", desc: "Perfect for birthdays and special occasions", price: "From £45", color: "border-t-primary", glowClass: "hover:shadow-[0_-5px_20px_hsl(var(--primary)/0.4)]", borderGlow: "hover:border-primary" },
+  { emoji: "💎", title: "Body Piercing", desc: "Professional, hygienic piercing service", price: "From £20", color: "border-t-secondary", glowClass: "hover:shadow-[0_-5px_20px_hsl(var(--secondary)/0.4)]", borderGlow: "hover:border-secondary" },
+  { emoji: "🌿", title: "Glowwa Supplements", desc: "Nourish your hair from the inside out", price: "Shop in salon", color: "border-t-accent", glowClass: "hover:shadow-[0_-5px_20px_hsl(var(--accent)/0.4)]", borderGlow: "hover:border-accent" },
 ];
 
 const ServicesGrid = () => {
@@ -20,12 +20,17 @@ const ServicesGrid = () => {
           {services.map((s) => (
             <div
               key={s.title}
-              className={`bg-card rounded-lg border border-border border-t-4 ${s.color} p-6 hover:shadow-[0_0_20px_hsl(var(--primary)/0.15)] hover:border-primary/40 transition-all duration-300`}
+              className={`bg-card rounded-lg border border-border border-t-4 ${s.color} p-6 flex flex-col hover:bg-[hsl(0_0%_15%)] ${s.glowClass} ${s.borderGlow} transition-all duration-300`}
             >
               <div className="text-3xl mb-3">{s.emoji}</div>
               <h3 className="text-lg font-display text-foreground mb-2">{s.title}</h3>
               <p className="text-muted-foreground text-sm font-body mb-4">{s.desc}</p>
-              <span className="text-primary font-semibold text-sm font-body">{s.price}</span>
+              <div className="mt-auto">
+                <span className="text-primary font-semibold text-sm font-body block mb-2">{s.price}</span>
+                <Link to="/contact" className="text-xs text-white uppercase border-b border-transparent hover:border-white transition-colors pb-0.5 inline-block">
+                  Book this service
+                </Link>
+              </div>
             </div>
           ))}
         </div>

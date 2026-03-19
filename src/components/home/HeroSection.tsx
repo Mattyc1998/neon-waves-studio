@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
 import GeometricDecoration from "../GeometricDecoration";
 import salonHero from "@/assets/salon-hero.png";
+import AnimatedShapes from "./AnimatedShapes";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+    <section className="relative py-16 md:py-24 flex items-center overflow-hidden">
+      <AnimatedShapes />
       <GeometricDecoration />
       <div className="container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative z-10">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl text-accent leading-tight mb-6">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl text-accent leading-none font-black tracking-tighter uppercase mb-6 uppercase">
               Uckfield's Favourite Hair Studio
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-lg font-body">
@@ -24,7 +26,7 @@ const HeroSection = () => {
               </Link>
               <a
                 href="#services"
-                className="border-2 border-foreground text-foreground px-7 py-3 rounded-md font-semibold hover:bg-foreground hover:text-background transition"
+                className="border-2 border-white text-white px-7 py-3 rounded-md font-semibold hover:bg-white hover:text-black transition"
               >
                 See Our Services
               </a>

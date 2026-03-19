@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import salonInterior from "@/assets/salon-interior.png";
 const AboutTeaser = () => {
   return (
-    <section className="py-20">
+    <section className="py-12 md:py-16">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -13,7 +13,7 @@ const AboutTeaser = () => {
               and is passionate about making every client feel relaxed, happy, and looking their best. Our retro vibe and
               expert team create a truly unique experience.
             </p>
-            <Link to="/about" className="text-primary hover:underline font-semibold font-body">
+            <Link to="/about" className="text-[#39FF14] drop-shadow-[0_0_8px_rgba(57,255,20,0.5)] font-bold text-lg hover:text-[#32e012] hover:underline font-body inline-block mt-4">
               Meet Louise →
             </Link>
           </div>

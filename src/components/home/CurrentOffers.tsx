@@ -46,7 +46,7 @@ const CurrentOffers = () => {
         <div className="mt-8 text-center">
           <Link
             to="/pricing"
-            className="inline-block bg-primary text-primary-foreground px-7 py-3 rounded-md font-semibold hover:brightness-110 transition"
+            className="inline-block border-2 border-white text-white px-7 py-3 rounded-md font-semibold hover:bg-white hover:text-black transition"
           >
             View all offers →
           </Link>
