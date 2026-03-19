@@ -11,19 +11,14 @@ import { motion } from "framer-motion";
 
 const FadeInSection = ({ children }: { children: React.ReactNode }) => (
   <motion.div
-    initial={{ opacity: 0, y: 30 }}
+    initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-100px" }}
-    transition={{ duration: 0.8, ease: "easeOut" }}
+    viewport={{ once: true, margin: "-50px" }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+    style={{ margin: 0, padding: 0 }}
   >
     {children}
   </motion.div>
-);
-
-const Divider = () => (
-  <div className="container mx-auto px-4">
-    <hr className="border-t border-border/40" />
-  </div>
 );
 
 const Index = () => {
@@ -31,28 +26,13 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1 flex flex-col">
-        <FadeInSection>
-          <HeroSection />
-        </FadeInSection>
-        <FadeInSection>
-          <AboutTeaser />
-        </FadeInSection>
-        <Divider />
-        <FadeInSection>
-          <ServicesGrid />
-        </FadeInSection>
-        <FadeInSection>
-          <CurrentOffers />
-        </FadeInSection>
-        <FadeInSection>
-          <OpeningHours />
-        </FadeInSection>
-        <FadeInSection>
-          <FAQSection />
-        </FadeInSection>
-        <FadeInSection>
-          <BookCTA />
-        </FadeInSection>
+        <FadeInSection><HeroSection /></FadeInSection>
+        <FadeInSection><AboutTeaser /></FadeInSection>
+        <FadeInSection><ServicesGrid /></FadeInSection>
+        <FadeInSection><CurrentOffers /></FadeInSection>
+        <FadeInSection><OpeningHours /></FadeInSection>
+        <FadeInSection><FAQSection /></FadeInSection>
+        <FadeInSection><BookCTA /></FadeInSection>
       </main>
       <Footer />
     </div>
