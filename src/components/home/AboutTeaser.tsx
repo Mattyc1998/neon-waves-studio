@@ -17,9 +17,11 @@ const AboutTeaser = () => {
               Meet Louise →
             </Link>
           </div>
-          <div className="w-full aspect-[4/3] bg-muted rounded-xl border-2 border-border flex items-center justify-center">
-            <span className="text-muted-foreground font-body text-sm">[ Salon interior photo ]</span>
-          </div>
+          <img
+            src={salonInterior}
+            alt="The Hair Studio interior with retro 80s geometric wall mural"
+            className="w-full aspect-[4/3] object-cover rounded-xl border-2 border-border"
+          />
         </div>
       </div>
     </section>
