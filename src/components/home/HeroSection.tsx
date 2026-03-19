@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import GeometricDecoration from "../GeometricDecoration";
+import salonHero from "@/assets/salon-hero.png";
 
 const HeroSection = () => {
   return (
@@ -35,9 +36,11 @@ const HeroSection = () => {
 
           {/* Placeholder image */}
           <div className="relative z-10 flex items-center justify-center">
-            <div className="w-full aspect-[4/3] bg-muted rounded-xl border-2 border-border flex items-center justify-center">
-              <span className="text-muted-foreground font-body text-sm">[ Hero salon photo ]</span>
-            </div>
+            <img
+              src={salonHero}
+              alt="The Hair Studio salon interior with styling chairs and retro decor"
+              className="w-full aspect-[4/3] object-cover rounded-xl border-2 border-border"
+            />
           </div>
         </div>
       </div>
