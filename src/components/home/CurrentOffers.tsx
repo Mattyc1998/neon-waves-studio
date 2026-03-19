@@ -48,7 +48,7 @@ const CurrentOffers = () => {
             to="/pricing"
             className="inline-block bg-primary text-primary-foreground px-7 py-3 rounded-md font-semibold hover:brightness-110 transition"
           >
-            View Full Pricing →
+            View all offers →
           </Link>
         </div>
       </div>
