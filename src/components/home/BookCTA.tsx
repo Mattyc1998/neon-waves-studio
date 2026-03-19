@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const BookCTA = () => {
   return (
-    <section className="relative py-[80px] bg-primary overflow-hidden">
+    <section className="relative py-16 md:py-24 bg-primary overflow-hidden">
       {/* Background Shapes */}
       <div className="absolute inset-0 pointer-events-none opacity-20 flex justify-between items-center z-0">
         <div className="w-64 h-64 border-8 border-[#003300] rounded-full translate-x-[-20%] translate-y-[20%]"></div>
@@ -15,15 +15,15 @@ const BookCTA = () => {
           Give us a call or book online — we'd love to welcome you to The Hair Studio.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a
+          
             href="tel:01825763042"
-            className="bg-background text-foreground px-7 py-3 rounded-md font-semibold hover:opacity-90 transition font-body"
+            className="bg-black text-[#39FF14] px-7 py-3 rounded-md font-semibold hover:opacity-90 transition font-body"
           >
             Call 01825 763042
           </a>
           <Link
             to="/contact"
-            className="border-2 border-black text-black px-7 py-3 rounded-md font-semibold hover:bg-black hover:text-primary transition font-body"
+            className="bg-black text-[#39FF14] px-7 py-3 rounded-md font-semibold hover:opacity-90 transition font-body"
           >
             Book Online
           </Link>
