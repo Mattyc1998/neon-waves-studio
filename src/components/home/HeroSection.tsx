@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import GeometricDecoration from "../GeometricDecoration";
+import salonHero from "@/assets/salon-hero.png";
 
 const HeroSection = () => {
   return (
