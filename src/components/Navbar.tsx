@@ -3,21 +3,21 @@ import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 
 const serviceLinks = [
-  { label: "Cuts & Styling", href: "/services/cuts-styling" },
-  { label: "Colour & Highlights", href: "/services/colour-highlights" },
-  { label: "Hair Extensions & Fairy Tinsel", href: "/services/extensions" },
-  { label: "Girls Pamper Package", href: "/services/pamper-package" },
-  { label: "Body Piercing", href: "/services/body-piercing" },
-  { label: "Glowwa Supplements", href: "/services/glowwa" },
+  "Cuts & Styling",
+  "Colour & Highlights",
+  "Hair Extensions & Fairy Tinsel",
+  "Girls Pamper Package",
+  "Body Piercing",
+  "Glowwa Supplements",
 ];
 
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services", dropdown: true },
-  { label: "Offers", href: "/offers" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Contact", href: "/contact" },
+  { label: "Home", href: "/", active: true },
+  { label: "About", href: "#", active: false },
+  { label: "Services", href: "#", active: false, dropdown: true },
+  { label: "Offers", href: "#", active: false },
+  { label: "Gallery", href: "#", active: false },
+  { label: "Contact", href: "#", active: false },
 ];
 
 const Navbar = () => {
@@ -37,30 +37,33 @@ const Navbar = () => {
           {navLinks.map((link) =>
             link.dropdown ? (
               <li key={link.label} className="relative group">
-                <button className="flex items-center gap-1 text-foreground hover:text-primary transition-colors py-2">
+                <button className="flex items-center gap-1 text-foreground hover:text-primary transition-colors py-2 cursor-default">
                   {link.label}
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                   <ul className="bg-card border border-border rounded-lg shadow-xl py-2 min-w-[240px]">
                     {serviceLinks.map((s) => (
-                      <li key={s.label}>
-                        <Link
-                          to={s.href}
-                          className="block px-4 py-2 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                        >
-                          {s.label}
-                        </Link>
+                      <li key={s}>
+                        <span className="block px-4 py-2 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
+                          {s}
+                        </span>
                       </li>
                     ))}
                   </ul>
                 </div>
               </li>
-            ) : (
+            ) : link.active ? (
               <li key={link.label}>
                 <Link to={link.href} className="text-foreground hover:text-primary transition-colors">
                   {link.label}
                 </Link>
+              </li>
+            ) : (
+              <li key={link.label}>
+                <span className="text-foreground hover:text-primary transition-colors cursor-default">
+                  {link.label}
+                </span>
               </li>
             )
           )}
@@ -68,12 +71,9 @@ const Navbar = () => {
 
         {/* Book Now + Mobile Toggle */}
         <div className="flex items-center gap-3">
-          <Link
-            to="/contact"
-            className="hidden sm:inline-block bg-primary text-primary-foreground px-5 py-2 rounded-md font-semibold text-sm hover:brightness-110 transition"
-          >
+          <span className="hidden sm:inline-block bg-primary text-primary-foreground px-5 py-2 rounded-md font-semibold text-sm cursor-default">
             Book Now
-          </Link>
+          </span>
           <button
             className="lg:hidden text-foreground"
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -101,20 +101,16 @@ const Navbar = () => {
                   {servicesExpanded && (
                     <ul className="pl-4 pb-2">
                       {serviceLinks.map((s) => (
-                        <li key={s.label}>
-                          <Link
-                            to={s.href}
-                            className="block py-2 text-muted-foreground hover:text-primary transition-colors text-sm"
-                            onClick={() => setMobileOpen(false)}
-                          >
-                            {s.label}
-                          </Link>
+                        <li key={s}>
+                          <span className="block py-2 text-muted-foreground text-sm cursor-default">
+                            {s}
+                          </span>
                         </li>
                       ))}
                     </ul>
                   )}
                 </li>
-              ) : (
+              ) : link.active ? (
                 <li key={link.label}>
                   <Link
                     to={link.href}
@@ -124,16 +120,18 @@ const Navbar = () => {
                     {link.label}
                   </Link>
                 </li>
+              ) : (
+                <li key={link.label}>
+                  <span className="block py-3 text-foreground hover:text-primary transition-colors font-medium cursor-default">
+                    {link.label}
+                  </span>
+                </li>
               )
             )}
             <li>
-              <Link
-                to="/contact"
-                className="block mt-2 bg-primary text-primary-foreground text-center px-5 py-3 rounded-md font-semibold text-sm"
-                onClick={() => setMobileOpen(false)}
-              >
+              <span className="block mt-2 bg-primary text-primary-foreground text-center px-5 py-3 rounded-md font-semibold text-sm cursor-default">
                 Book Now
-              </Link>
+              </span>
             </li>
           </ul>
         </div>
