@@ -8,7 +8,7 @@ const AboutTeaser = () => {
           <div>
             <span className="text-primary uppercase text-sm font-semibold tracking-widest font-body">Who we are</span>
             <h2 className="text-3xl sm:text-4xl text-accent mt-2 mb-6">A little about us</h2>
-            <p className="text-muted-foreground leading-relaxed mb-6 font-body">
+            <p className="text-[#E5E5E5] leading-relaxed mb-6 font-body">
               The Hair Studio is Uckfield's friendliest and most colourful salon. Owner Louise took over in March 2025
               and is passionate about making every client feel relaxed, happy, and looking their best. Our retro vibe and
               expert team create a truly unique experience.

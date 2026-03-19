@@ -20,7 +20,7 @@ const OpeningHours = () => {
             <div key={h.day} className="flex items-center justify-between py-2 border-b border-border">
               <span className="font-body font-medium text-foreground">{h.day}</span>
               <div className="flex items-center gap-3">
-                <span className={`font-body ${h.time === "Closed" ? "text-muted-foreground" : "text-foreground"}`}>
+                <span className={`font-body ${h.time === "Closed" ? "text-[#E5E5E5]" : "text-foreground"}`}>
                   {h.time}
                 </span>
                 {h.badge && (
@@ -33,7 +33,7 @@ const OpeningHours = () => {
           ))}
         </div>
 
-        <p className="mt-8 text-muted-foreground font-body">
+        <p className="mt-8 text-[#E5E5E5] font-body">
           Uckfield, East Sussex &nbsp;|&nbsp;{" "}
           <a href="tel:01825763042" className="hover:text-primary transition-colors">01825 763042</a>
         </p>

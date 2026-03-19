@@ -16,13 +16,13 @@ const BookCTA = () => {
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href="tel:01825763042"
-            className="bg-black text-[#39FF14] px-7 py-3 rounded-md font-semibold hover:opacity-90 transition font-body"
+            className="bg-black text-[#39FF14] px-7 py-3 rounded-md font-semibold transition-all duration-200 hover:scale-[1.03] font-body"
           >
             Call 01825 763042
           </a>
           <Link
             to="/contact"
-            className="bg-black text-[#39FF14] px-7 py-3 rounded-md font-semibold hover:opacity-90 transition font-body"
+            className="bg-black text-[#39FF14] px-7 py-3 rounded-md font-semibold transition-all duration-200 hover:scale-[1.03] font-body"
           >
             Book Online
           </Link>

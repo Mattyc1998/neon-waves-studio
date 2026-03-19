@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { motion } from "framer-motion";
 
 const faqs = [
   {
@@ -41,18 +42,38 @@ const FAQSection = () => {
           <h2 className="text-3xl sm:text-4xl text-accent mt-2">Frequently Asked Questions</h2>
         </div>
 
-        <Accordion type="single" collapsible className="space-y-3">
-          {faqs.map((faq, i) => (
-            <AccordionItem key={i} value={`faq-${i}`} className="bg-card border border-border rounded-lg px-6 py-2 border-l-[3px] border-l-transparent data-[state=open]:border-l-[#39FF14] transition-colors duration-200">
-              <AccordionTrigger className="text-foreground font-body font-medium text-left hover:text-[#39FF14] hover:no-underline data-[state=open]:text-[#39FF14] [&[data-state=open]>svg]:text-[#39FF14] text-lg">
-                {faq.q}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground font-body text-base mt-2 pb-4">
-                {faq.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: { staggerChildren: 0.1 }
+            }
+          }}
+        >
+          <Accordion type="single" collapsible className="space-y-3">
+            {faqs.map((faq, i) => (
+              <motion.div
+                key={`motion-faq-${i}`}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                }}
+              >
+                <AccordionItem key={i} value={`faq-${i}`} className="bg-card border border-border rounded-lg px-6 py-2 border-l-[3px] border-l-transparent data-[state=open]:border-l-[#39FF14] transition-colors duration-200">
+                  <AccordionTrigger className="text-foreground font-body font-medium text-left hover:text-[#39FF14] hover:no-underline data-[state=open]:text-[#39FF14] [&[data-state=open]>svg]:text-[#39FF14] text-lg">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-[#E5E5E5] font-body text-base mt-2 pb-4">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
+            ))}
+          </Accordion>
+        </motion.div>
       </div>
     </section>
   );

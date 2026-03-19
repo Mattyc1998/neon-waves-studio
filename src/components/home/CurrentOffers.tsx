@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const offers = [
   {
@@ -25,24 +26,39 @@ const CurrentOffers = () => {
         <span className="text-primary uppercase text-sm font-semibold tracking-widest font-body">Don't miss out</span>
         <h2 className="text-3xl sm:text-4xl text-accent mt-2 mb-10">Current Offers</h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div 
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: { staggerChildren: 0.1 }
+            }
+          }}
+        >
           {offers.map((o) => (
-            <div
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+              }}
               key={o.title}
               className={`bg-card rounded-lg border-2 ${o.borderColor} p-6 hover:shadow-[0_0_25px_hsl(var(--primary)/0.1)] transition-all duration-300`}
             >
               <h3 className="font-display text-foreground text-lg mb-2">{o.title}</h3>
-              <p className="text-muted-foreground text-sm font-body mb-5">{o.desc}</p>
+              <p className="text-[#E5E5E5] text-sm font-body mb-5">{o.desc}</p>
               <Link
                 to="/contact"
-                className="inline-block px-7 py-3 rounded-md font-semibold hover:brightness-110 transition"
+                className="inline-block px-7 py-3 rounded-md font-semibold transition-all duration-200 hover:drop-shadow-[0_0_12px_rgba(57,255,20,0.6)] hover:scale-[1.03]"
                 style={{ backgroundColor: '#39FF14', color: '#000000' }}
               >
                 Book This Deal
               </Link>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <div className="mt-8 text-center">
           <Link
