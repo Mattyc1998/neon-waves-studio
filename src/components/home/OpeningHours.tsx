@@ -10,7 +10,7 @@ const hours = [
 
 const OpeningHours = () => {
   return (
-    <section className="py-20 bg-[#1a1a1a]">
+    <section className="py-16 md:py-24 bg-[#1a1a1a]">
       <div className="container mx-auto px-4 max-w-2xl text-center">
         <span className="text-primary uppercase text-sm font-semibold tracking-widest font-body">Come and see us</span>
         <h2 className="text-3xl sm:text-4xl text-accent mt-2 mb-10">When you can find us</h2>

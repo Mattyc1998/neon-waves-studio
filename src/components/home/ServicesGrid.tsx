@@ -11,7 +11,7 @@ const services = [
 
 const ServicesGrid = () => {
   return (
-    <section id="services" className="py-20">
+    <section id="services" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <span className="text-primary uppercase text-sm font-semibold tracking-widest font-body">What we do</span>
         <h2 className="text-3xl sm:text-4xl text-accent mt-2 mb-10">Our Services</h2>
@@ -27,8 +27,8 @@ const ServicesGrid = () => {
               <p className="text-muted-foreground text-sm font-body mb-4">{s.desc}</p>
               <div className="mt-auto">
                 <span className="text-primary font-semibold text-sm font-body block mb-2">{s.price}</span>
-                <Link to="/contact" className="text-xs text-white uppercase border-b border-transparent hover:border-white transition-colors pb-0.5 inline-block">
-                  Book this service
+                <Link to="/contact" className="text-xs text-primary font-bold uppercase border-b border-primary hover:text-white hover:border-white transition-colors pb-0.5 inline-flex items-center gap-1">
+                  Book this service <span aria-hidden="true">→</span>
                 </Link>
               </div>
             </div>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import salonInterior from "@/assets/salon-interior.png";
 const AboutTeaser = () => {
   return (
-    <section className="py-12 md:py-16">
+    <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>

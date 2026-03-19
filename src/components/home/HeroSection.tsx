@@ -8,10 +8,10 @@ const HeroSection = () => {
     <section className="relative py-16 md:py-24 flex items-center overflow-hidden">
       <AnimatedShapes />
       <GeometricDecoration />
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative z-10">
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl text-accent leading-none font-black tracking-tighter uppercase mb-6 uppercase">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl text-primary leading-none font-black tracking-tighter uppercase mb-6">
               Uckfield's Favourite Hair Studio
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-lg font-body">
@@ -20,7 +20,7 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-4 mb-6">
               <Link
                 to="/contact"
-                className="bg-primary text-primary-foreground px-7 py-3 rounded-md font-semibold hover:brightness-110 transition"
+                className="bg-primary text-black px-7 py-3 rounded-md font-semibold hover:brightness-110 transition"
               >
                 Book an Appointment
               </Link>

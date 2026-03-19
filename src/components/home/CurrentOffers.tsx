@@ -20,7 +20,7 @@ const offers = [
 
 const CurrentOffers = () => {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-16 md:py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <span className="text-primary uppercase text-sm font-semibold tracking-widest font-body">Don't miss out</span>
         <h2 className="text-3xl sm:text-4xl text-accent mt-2 mb-10">Current Offers</h2>
@@ -35,7 +35,7 @@ const CurrentOffers = () => {
               <p className="text-muted-foreground text-sm font-body mb-5">{o.desc}</p>
               <Link
                 to="/contact"
-                className="inline-block bg-primary text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold hover:brightness-110 transition"
+                className="inline-block bg-primary text-black px-7 py-3 rounded-md font-semibold hover:brightness-110 transition"
               >
                 Book This Deal
               </Link>
