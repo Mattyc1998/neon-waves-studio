@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import salonInterior from "@/assets/salon-interior.png";
 const AboutTeaser = () => {
   return (
     <section className="py-20">
