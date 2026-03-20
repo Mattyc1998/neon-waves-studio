@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+
 import { Scissors, Palette, Sparkles, Gift, Zap, Leaf } from "lucide-react";
 
 const services = [
