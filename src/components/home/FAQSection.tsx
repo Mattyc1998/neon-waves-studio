@@ -35,7 +35,7 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section className="py-[80px] bg-muted/30">
+    <section className="py-12 sm:py-[80px] bg-muted/30">
       <div className="container mx-auto px-4 max-w-3xl">
         <div className="text-center mb-10">
           <span className="text-primary uppercase text-sm font-semibold tracking-widest font-body">Got questions?</span>
@@ -62,11 +62,11 @@ const FAQSection = () => {
                   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
                 }}
               >
-                <AccordionItem key={i} value={`faq-${i}`} className="bg-card border border-border rounded-lg px-6 py-2 border-l-[3px] border-l-transparent data-[state=open]:border-l-[#39FF14] transition-colors duration-200">
-                  <AccordionTrigger className="text-foreground font-body font-medium text-left hover:text-[#39FF14] hover:no-underline data-[state=open]:text-[#39FF14] [&[data-state=open]>svg]:text-[#39FF14] text-lg">
+                <AccordionItem key={i} value={`faq-${i}`} className="bg-card border border-border rounded-lg px-4 sm:px-6 py-2 border-l-[3px] border-l-transparent data-[state=open]:border-l-[#39FF14] transition-colors duration-200">
+                  <AccordionTrigger className="text-foreground font-body font-medium text-left hover:text-[#39FF14] hover:no-underline data-[state=open]:text-[#39FF14] [&[data-state=open]>svg]:text-[#39FF14] text-base sm:text-lg min-h-[48px]">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-[#E5E5E5] font-body text-base mt-2 pb-4">
+                  <AccordionContent className="text-[#E5E5E5] font-body text-sm sm:text-base mt-2 pb-4">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>

@@ -13,13 +13,13 @@ const services = [
 
 const ServicesGrid = () => {
   return (
-    <section id="services" className="py-[80px]">
+    <section id="services" className="py-12 sm:py-[80px]">
       <div className="container mx-auto px-4">
         <span className="text-primary uppercase text-sm font-semibold tracking-widest font-body">What we do</span>
         <h2 className="text-3xl sm:text-4xl text-accent mt-2 mb-10">Our Services</h2>
 
         <motion.div 
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
@@ -48,7 +48,7 @@ const ServicesGrid = () => {
               <p className="text-[#E5E5E5] text-sm font-body mb-4">{s.desc}</p>
               <div className="mt-auto">
                 <span className="text-primary font-semibold text-sm font-body block mb-2">{s.price}</span>
-                <Link to="/contact" className="text-xs text-primary font-bold uppercase border-b border-primary hover:text-white hover:border-white transition-colors pb-0.5 inline-flex items-center gap-1">
+                <Link to="/contact" className="text-xs text-primary font-bold uppercase border-b border-primary hover:text-white hover:border-white transition-colors pb-0.5 inline-flex items-center gap-1 min-h-[44px]">
                   Book this service <span aria-hidden="true">→</span>
                 </Link>
               </div>

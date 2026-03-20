@@ -21,13 +21,13 @@ const offers = [
 
 const CurrentOffers = () => {
   return (
-    <section className="py-[80px] bg-muted/30">
+    <section className="py-12 sm:py-[80px] bg-muted/30">
       <div className="container mx-auto px-4">
         <span className="text-primary uppercase text-sm font-semibold tracking-widest font-body">Don't miss out</span>
         <h2 className="text-3xl sm:text-4xl text-accent mt-2 mb-10">Current Offers</h2>
 
         <motion.div 
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
@@ -51,7 +51,7 @@ const CurrentOffers = () => {
               <p className="text-[#E5E5E5] text-sm font-body mb-5">{o.desc}</p>
               <Link
                 to="/contact"
-                className="inline-block px-7 py-3 rounded-md font-semibold transition-all duration-200 hover:drop-shadow-[0_0_12px_rgba(57,255,20,0.6)] hover:scale-[1.03]"
+                className="inline-block w-full sm:w-auto text-center px-7 py-3 min-h-[48px] rounded-md font-semibold transition-all duration-200 hover:drop-shadow-[0_0_12px_rgba(57,255,20,0.6)] hover:scale-[1.03]"
                 style={{ backgroundColor: '#39FF14', color: '#000000' }}
               >
                 Book This Deal
@@ -63,7 +63,7 @@ const CurrentOffers = () => {
         <div className="mt-8 text-center">
           <Link
             to="/pricing"
-            className="inline-block border-[1px] border-solid border-white bg-transparent text-white px-7 py-3 rounded-md font-semibold hover:bg-white hover:text-black transition"
+            className="inline-block border-[1px] border-solid border-white bg-transparent text-white px-7 py-3 min-h-[48px] rounded-md font-semibold hover:bg-white hover:text-black transition"
           >
             View all offers →
           </Link>

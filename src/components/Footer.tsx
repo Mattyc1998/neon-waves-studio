@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-card border-t border-border">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="container mx-auto px-4 py-10 sm:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
           {/* Left */}
           <div>
             <span className="font-display text-primary text-xl italic font-bold">THE HAIR STUDIO</span>
@@ -51,7 +51,7 @@ const Footer = () => {
       <div className="border-t border-border">
         <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between text-xs text-[#E5E5E5] gap-2">
           <span>© 2026 The Hair Studio, Uckfield</span>
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
             <Link to="/terms" className="hover:text-primary transition-colors">Terms &amp; Conditions</Link>
             <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
           </div>

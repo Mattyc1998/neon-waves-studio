@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import salonInterior from "@/assets/salon-interior.png";
 const AboutTeaser = () => {
   return (
-    <section className="pt-0 pb-[80px]">
+    <section className="pt-0 pb-12 sm:pb-[80px]">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="text-center lg:text-left">
             <span className="text-primary uppercase text-sm font-semibold tracking-widest font-body">Who we are</span>
             <h2 className="text-3xl sm:text-4xl text-accent mt-2 mb-6">A little about us</h2>
             <p className="text-[#E5E5E5] leading-relaxed mb-6 font-body">
