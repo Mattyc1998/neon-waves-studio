@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+
 import { Scissors, Palette, Sparkles, Gift, Zap, Leaf } from "lucide-react";
 
 const services = [
@@ -18,26 +18,11 @@ const ServicesGrid = () => {
         <span className="text-primary uppercase text-sm font-semibold tracking-widest font-body">What we do</span>
         <h2 className="text-3xl sm:text-4xl text-accent mt-2 mb-10">Our Services</h2>
 
-        <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={{
-            hidden: {},
-            visible: {
-              transition: { staggerChildren: 0.1 }
-            }
-          }}
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s) => {
             const Icon = s.icon;
             return (
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-              }}
+            <div
               key={s.title}
               className={`bg-card rounded-lg border border-border border-t-4 ${s.color} p-6 flex flex-col hover:bg-[hsl(0_0%_18%)] ${s.glowClass} transition-all duration-300`}
             >
@@ -52,10 +37,10 @@ const ServicesGrid = () => {
                   Book this service <span aria-hidden="true">→</span>
                 </Link>
               </div>
-            </motion.div>
+            </div>
             );
           })}
-        </motion.div>
+        </div>
 
         <div className="mt-8 text-center">
           <Link to="/services" className="text-primary hover:underline font-semibold font-body">
