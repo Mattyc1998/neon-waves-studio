@@ -10,16 +10,16 @@ const hours = [
 
 const OpeningHours = () => {
   return (
-    <section className="py-[80px] bg-[#1a1a1a]">
+    <section className="py-12 sm:py-[80px] bg-[#1a1a1a]">
       <div className="container mx-auto px-4 max-w-2xl text-center">
         <span className="text-primary uppercase text-sm font-semibold tracking-widest font-body">Come and see us</span>
         <h2 className="text-3xl sm:text-4xl text-accent mt-2 mb-10">When you can find us</h2>
 
         <div className="space-y-3">
           {hours.map((h) => (
-            <div key={h.day} className="flex items-center justify-between py-2 border-b border-border">
+            <div key={h.day} className="flex flex-wrap items-center justify-between gap-2 py-2 border-b border-border">
               <span className="font-body font-medium text-foreground">{h.day}</span>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                 <span className={`font-body ${h.time === "Closed" ? "text-[#E5E5E5]" : "text-foreground"}`}>
                   {h.time}
                 </span>

@@ -26,9 +26,9 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
-      <div className="container mx-auto px-4 flex items-center justify-between h-16">
+      <div className="container mx-auto px-4 flex items-center justify-between h-14 sm:h-16">
         {/* Logo */}
-        <Link to="/" className="font-display text-primary text-xl italic font-bold tracking-wide">
+        <Link to="/" className="font-display text-primary text-base sm:text-xl italic font-bold tracking-wide">
           THE HAIR STUDIO
         </Link>
 
@@ -69,13 +69,13 @@ const Navbar = () => {
           )}
         </ul>
 
-        {/* Book Now + Mobile Toggle */}
+        {/* Book Now (desktop only) + Mobile Toggle */}
         <div className="flex items-center gap-3">
-          <span className="hidden sm:inline-block bg-primary text-primary-foreground px-5 py-2 rounded-md font-semibold text-sm cursor-default transition-all duration-200 hover:drop-shadow-[0_0_12px_rgba(57,255,20,0.6)] hover:scale-[1.03]">
+          <span className="hidden lg:inline-block bg-primary text-primary-foreground px-5 py-2 rounded-md font-semibold text-sm cursor-default transition-all duration-200 hover:drop-shadow-[0_0_12px_rgba(57,255,20,0.6)] hover:scale-[1.03]">
             Book Now
           </span>
           <button
-            className="lg:hidden text-foreground"
+            className="lg:hidden text-foreground p-2 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -92,7 +92,7 @@ const Navbar = () => {
               link.dropdown ? (
                 <li key={link.label}>
                   <button
-                    className="w-full flex items-center justify-between py-3 text-foreground hover:text-primary transition-colors font-medium"
+                    className="w-full flex items-center justify-between py-3 min-h-[48px] text-foreground hover:text-primary transition-colors font-medium"
                     onClick={() => setServicesExpanded(!servicesExpanded)}
                   >
                     {link.label}
@@ -102,7 +102,7 @@ const Navbar = () => {
                     <ul className="pl-4 pb-2">
                       {serviceLinks.map((s) => (
                         <li key={s}>
-                          <span className="block py-2 text-muted-foreground text-sm cursor-default">
+                          <span className="block py-2 min-h-[44px] flex items-center text-muted-foreground text-sm cursor-default">
                             {s}
                           </span>
                         </li>
@@ -114,7 +114,7 @@ const Navbar = () => {
                 <li key={link.label}>
                   <Link
                     to={link.href}
-                    className="block py-3 text-foreground hover:text-primary transition-colors font-medium"
+                    className="block py-3 min-h-[48px] flex items-center text-foreground hover:text-primary transition-colors font-medium"
                     onClick={() => setMobileOpen(false)}
                   >
                     {link.label}
@@ -122,14 +122,14 @@ const Navbar = () => {
                 </li>
               ) : (
                 <li key={link.label}>
-                  <span className="block py-3 text-foreground hover:text-primary transition-colors font-medium cursor-default">
+                  <span className="block py-3 min-h-[48px] flex items-center text-foreground hover:text-primary transition-colors font-medium cursor-default">
                     {link.label}
                   </span>
                 </li>
               )
             )}
             <li>
-              <span className="block mt-2 bg-primary text-primary-foreground text-center px-5 py-3 rounded-md font-semibold text-sm cursor-default transition-all duration-200 hover:drop-shadow-[0_0_12px_rgba(57,255,20,0.6)] hover:scale-[1.03]">
+              <span className="block mt-2 bg-primary text-primary-foreground text-center px-5 py-3 min-h-[48px] rounded-md font-semibold text-sm cursor-default transition-all duration-200 hover:drop-shadow-[0_0_12px_rgba(57,255,20,0.6)] hover:scale-[1.03]">
                 Book Now
               </span>
             </li>
