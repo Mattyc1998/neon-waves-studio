@@ -26,24 +26,9 @@ const CurrentOffers = () => {
         <span className="text-primary uppercase text-sm font-semibold tracking-widest font-body">Don't miss out</span>
         <h2 className="text-3xl sm:text-4xl text-accent mt-2 mb-10">Current Offers</h2>
 
-        <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={{
-            hidden: {},
-            visible: {
-              transition: { staggerChildren: 0.1 }
-            }
-          }}
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {offers.map((o) => (
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-              }}
+            <div
               key={o.title}
               className={`bg-card rounded-lg border-2 ${o.borderColor} p-6 hover:shadow-[0_0_25px_hsl(var(--primary)/0.1)] transition-all duration-300`}
             >
@@ -56,9 +41,9 @@ const CurrentOffers = () => {
               >
                 Book This Deal
               </Link>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         <div className="mt-8 text-center">
           <Link
