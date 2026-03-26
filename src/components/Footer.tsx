@@ -32,7 +32,7 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-accent text-sm mb-4">Get In Touch</h4>
             <div className="text-sm text-[#E5E5E5] space-y-2">
-              <p>The Hair Studio<br />Uckfield, East Sussex</p>
+              <p>The Hair Studio<br />36 Browns Ln<br />Uckfield TN22 1UN</p>
               <p>
                 <a href="tel:01825763042" className="hover:text-primary transition-colors">01825 763042</a>
               </p>
