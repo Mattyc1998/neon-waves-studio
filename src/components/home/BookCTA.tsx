@@ -13,20 +13,12 @@ const BookCTA = () => {
         <p className="text-[#111] font-body mb-8 max-w-lg mx-auto font-medium">
           Give us a call or book online — we would love to welcome you to The Hair Studio.
         </p>
-        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
-          <a
-            href="tel:01825763042"
-            className="bg-black text-[#39FF14] px-7 py-3 min-h-[48px] rounded-md font-semibold transition-all duration-200 hover:scale-[1.03] font-body text-center"
-          >
-            Call 01825 763042
-          </a>
-          <Link
-            to="/contact"
-            className="bg-black text-[#39FF14] px-7 py-3 min-h-[48px] rounded-md font-semibold transition-all duration-200 hover:scale-[1.03] font-body text-center"
-          >
-            Book Online
-          </Link>
-        </div>
+        <a
+          href="tel:01825763042"
+          className="bg-black text-[#39FF14] px-7 py-3 min-h-[48px] rounded-md font-semibold transition-all duration-200 hover:scale-[1.03] font-body text-center inline-block"
+        >
+          Call 01825 763042
+        </a>
       </div>
     </section>
   );
