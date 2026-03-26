@@ -129,9 +129,9 @@ const Navbar = () => {
               )
             )}
             <li>
-              <span className="block mt-2 bg-primary text-primary-foreground text-center px-5 py-3 min-h-[48px] rounded-md font-semibold text-sm cursor-default transition-all duration-200 hover:drop-shadow-[0_0_12px_rgba(57,255,20,0.6)] hover:scale-[1.03]">
-                Book Now
-              </span>
+              <a href="tel:01825763042" className="block mt-2 bg-primary text-primary-foreground text-center px-5 py-3 min-h-[48px] rounded-md font-semibold text-sm transition-all duration-200 hover:drop-shadow-[0_0_12px_rgba(57,255,20,0.6)] hover:scale-[1.03]">
+                Call Now
+              </a>
             </li>
           </ul>
         </div>
