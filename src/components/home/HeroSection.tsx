@@ -18,12 +18,12 @@ const HeroSection = () => {
               Professional cuts, colour &amp; styling in the heart of Uckfield — where every client leaves feeling amazing
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-4 sm:mb-6 justify-center lg:justify-start">
-              <Link
-                to="/contact"
+              <a
+                href="#book-cta"
                 className="bg-[#39FF14] text-black px-7 py-3 rounded-md font-semibold transition-all duration-200 hover:drop-shadow-[0_0_12px_rgba(57,255,20,0.6)] hover:scale-[1.03] text-center min-h-[48px] flex items-center justify-center"
               >
                 Book an Appointment
-              </Link>
+              </a>
               <a
                 href="#services"
                 className="border-2 border-white text-white px-7 py-3 rounded-md font-semibold hover:bg-white hover:text-black transition text-center min-h-[48px] flex items-center justify-center"
